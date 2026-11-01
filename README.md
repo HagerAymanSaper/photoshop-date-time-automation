@@ -1,55 +1,76 @@
-# Photoshop Date & Time Automation
+# Photoshop Automation Tools
 
-A simple Photoshop automation tool that retrieves the current date and time online and automatically types the result into Photoshop as text.
+A collection of JavaScript (JSX) scripts designed to automate repetitive tasks in Adobe Photoshop.
 
-## Features
+## Available Scripts
 
-- Automatically retrieves the current date and time online.
-- Inserts the retrieved information into Photoshop as editable text.
-- Can be converted into a Photoshop Action for one-click execution.
-- Includes a second script for automatically typing the next code.
+### 1. Code.jsx – Automatic Date Generator
+
+Automatically creates a new text layer containing the current date.
+
+**Features:**
+- Retrieves the current date from the computer.
+- Formats the date as `YYYY-MM-DD`.
+- Creates a new editable text layer.
+- Sets the text position to X: 100px, Y: 100px.
+- Sets font size to 48px.
+- Uses Arial font.
+
+### 2. Code2.jsx – Automatic Code Incrementer
+
+Automatically generates and increments codes inside Photoshop.
+
+**Features:**
+- Uses `J` as the code prefix.
+- Starts from `J2174`.
+- Automatically increments the previous number.
+- Updates the currently selected text layer.
+- Saves the last generated number in a counter file in the Documents folder.
+- Preserves the numbering sequence between sessions.
 
 ## Installation
 
-### Step 1 – Copy the Scripts
+**Step 1 – Copy the scripts**
 
-Copy the provided `.jsx` files into your Photoshop Scripts directory:
+Copy both `.jsx` files into the following Photoshop Scripts directory:
 
 ```text
 C:\Program Files\Adobe\Adobe Photoshop 2025\Presets\Scripts
 ```
 
-**Note:** Administrator permission may be required.
+**Step 2 – Restart Photoshop**
 
-### Step 2 – Restart Photoshop
+Restart Photoshop to make the scripts available.
 
-Close and reopen Photoshop so the new scripts appear in the Scripts menu.
+**Step 3 – Create Photoshop Actions**
 
-### Step 3 – Create Photoshop Actions
+For each script:
 
 1. Open Photoshop.
-2. Go to **Window → Actions**.
-3. Create a new Action and give it a name.
-4. Click **Record**.
-5. Go to **File → Scripts**.
-6. Select the desired script.
-7. Stop recording in the Actions panel.
+2. Go to Window → Actions.
+3. Create a new Action and name it.
+4. Click Record.
+5. Go to File → Scripts.
+6. Select the script you want to automate.
+7. Stop recording.
 
-### Step 4 – Use Your Actions
+**Step 4 – Run your Actions**
 
-You can now run the saved Photoshop Actions whenever needed without manually navigating to the Scripts menu.
+Your scripts are now accessible through your recorded Photoshop Actions.
 
 ## Requirements
 
-- Adobe Photoshop 2025
-- Windows
-- Internet connection for retrieving online date and time.
+- Adobe Photoshop 2025.
+- Windows operating system.
+- No additional software required.
 
-## Project Files
+## Notes
 
-- Date & Time Automation: Retrieves and types the current date and time.
-- Next Code Automation: Automatically types the next code into Photoshop.
+- Code.jsx creates a new date text layer every time it runs.
+- Code2.jsx requires an existing document and a selected text layer.
+- Code2.jsx stores its numbering counter in your Documents folder.
+- Keep the JSX files installed because the recorded Actions execute these external scripts.
 
 ## License
 
-Free to use and modify for personal workflows.
+Free to use and modify for personal and educational purposes.
